@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>سیستم مدیریت فیوژن پارسی</title>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<style type='text/css'>
+a { color:#003D71; text-decoration:none; }
+a:hover { color:#027AC6; text-decoration:underline; }
+.tbl1 {
+	font-family:Tahoma,Verdana,Tahoma,Arial,Sans-Serif;
+	font-size:11px;
+	color:#000;
+	background-color:#fefefe;
+	border: 1px #ddd solid;
+	padding:4px;
+	margin-bottom: 5px;
+}
+.tbl2 {
+	font-family:Tahoma,Verdana,Tahoma,Arial,Sans-Serif;
+	font-size:11px;
+	color:#fff;
+	background-color:#444;
+	border: 1px #ddd solid;
+	padding:4px;
+	margin-bottom: 5px;
+}
+</style>
+</head>
+<body bgcolor='#ffffff' dir='rtl'>
+
+<center><div style='text-align:right;width:600px;'>
+	
+<div align='center' class='tbl1'><img src='files/images/php-fusion-logo.png' alt='PHP-Fusion' title='PHP-Fusion'><br><br>
+Copyright &copy; 2002 - 2013 سایت رسمی فیوژن پارسی در ایران<br>
+<b>نگارش:</b> v7.02.07 - <b>تاریخ انتشار نسخه فارسی:</b> 1392/06/05</div>
+
+<div class='tbl2'>معرفی</div>
+
+<div class='tbl1'>برنامه PHP-Fusion یک سیستم مدیریت محتوای متن باز کم حجم است که به زبان PHP 5 (قابل اجرا بر روی PHP 4) است.
+این برنامه از پایگاه داده MySQL برای ذخیره سازی محتوای وب سایت شما استفاده می کند و دارای یک سیستم مدیریتی ساده و در عین حال قوی می باشد.
+این برنامه دارای ویژگی های زیادی است که شما در دیگر سیستم های مدیریت محتوا می بینید.
+
+<p>این بسته نرم افزاری یک نرم افزاری رایگان می باشد: شما می توانید آن را بر اساس قوانین و شرایط
+GNU Affero General Public License (AGPL) که توسط بنیاد نرم افزاری آزاد منتشر شده است ویرایش و پخش کنید
+
+<p>این بسته نرم افزاری بر این اساس توزیع شده است که مفید خواهد بود، اما بدون هیچ گونه ضمانتی؛ 
+برای جزئیات بیشتر مجوز Affero General Public را بخوانید.
+
+<p>شما باید یک کپی از مجوز GNU Affero General Public را با این بسته نرم افزاری دریافت کنید. اگر نه، پس اینجا را ببینید: <a href='http://www.fsf.org/licensing/licenses/agpl-3.0.html'>www.fsf.org</a>.
+
+<p><b>نکته مهم</b>: شما مجاز به پاک کردن کپی رایت در قسمت فوتر نخواهید بود:
+	
+<p>Powered by <a href='http://www.php-fusion.co.uk'>PHP-Fusion</a> copyright &copy; 2002 - 2013 by Nick Jones.<br>
+Released as free software without warranties under <a href='http://www.fsf.org/licensing/licenses/agpl-3.0.html'>GNU Affero GPL</a> v3.
+
+<p>برای پاک کردن این کپی رایت به
+<a href='http://www.php-fusion-iran.com'>سایت رسمی فیوژن پارسی در ایران ( از اینجا )</a> مراجعه کنید.
+</div>
+
+<div class='tbl2'>نصب</div>
+
+<div class='tbl1'>پیش از نصب PHP-Fusion شما باید یک پایگاه داده MySQL بسازید. شما
+می توانید این کار را از طریق کنترل هاست خود و یا برنامه phpMyAdmin انجام دهید. مطمئن شوید که شما اطلاعات مورد
+نیاز برای دسترسی به MySQL را در دست دارید (نام هاست، نام کاربری، گذرواژه، نام پایگاه داده) زیرا شما این اطلاعات را در حین نصب برنامه نیاز دارید.
+
+<p><b>1.</b> پیش از آپلود فایل ها، ابتدا فایل _config.php (که در پوشه files قرار دارد) را به config.php تغییر نام دهید.
+
+<p><b>2.</b> محتوای پوشه files را به هاست خود آپلود کنید.
+
+<p><b>3.</b> از آنجایی که شما این برنامه را بر روی سرور نصب می کنید باید فایل ها و پوشه های زیر را بر روی 777 تنظیم کنید:
+
+<div dir="ltr" align="left">
+<ul style='list-style-type:disc'>
+<li>administration/db_backups/</li>
+<li>forum/attachments/</li>
+<li>downloads</li>
+<li>downloads/images/</li>
+<li>downloads/submissions/</li>
+<li>ownloads/submissions/images</li>
+<li>ftp_upload</li>
+<li>images</li>
+<li>images/imagelist.js</li>
+<li>images/articles/</li>
+<li>images/avatars/</li>
+<li>images/news</li>
+<li>images/news/thumbs</li>
+<li>images/news_cats</li>
+<li>images/photoalbum</li>
+<li>images/photoalbum/submissions</li>
+<li>config.php</li>
+</ul>
+<div dir="rtl" align="right">
+<p><b>4.</b> به وب سایت خود رفته. فایل setup.php به صورت خودکار باید شروع شود. اگر نه، شما باید خودتان این فایل را اجرا کنید. به این صورت که آدرس کامل وب سایت خود را نوشته به همراه <font dir="ltr">/setup.php</font>
+نمونه: http://www.yourdomain.com/setup.php.
+
+<p><b>5.</b> برنامه نصب را ادامه دهید.
+
+<p><b>6.</b> پس از نصب برنامه PHP-Fusion بدون درنگ فایل
+config.php را بر روی 644 قرار داده و فایل setup.php از حذف کنید.</div>
+<div dir="rtl" align="right">
+<div class='tbl2'>به روز رسانی از نگارش <font dir="ltr">7.00.XX</font></div>
+
+<div class='tbl1'>پیش از به روز رسانی ما به شما توصیه می کنیم که از فایل های و پایگاه داده خود یک نسخه پشتیبان داشته باشید و بعد برنامه را به روز رسانی کنید.
+
+
+
+
+
+
+
+<p><b>1.</b> کد نگارش v 7.00.xx با نگارش v7.02.07 متناسب نیست. شما باید پیش از به روز رسانی برنامه های جانبی و پنل های خود را ویرایش کنید. پیشنهاد می کنیم که پیش از به روز رسانی همه برنامه هایی که از دیگر سایت ها گرفته اید را غیرفعال کنید تا در حین به روز رسانی به مشکل برنخورید.
+
+<p><b>2.</b> شما اول باید فایل upgrade.php را که در پوشه 'upgrade  v 7.00.xx' را به پوشه administration که در سایت شماست بریزید.
+
+<p><b>3.</b> به عنوان مدیر کل سایت وارد سایت خود شوید. زیر برگه مدیریت سیستم که در پنل مدیریت شما قرار دارد بر روی به روز رسانی کلیک کنید. سپس بر روی دکمه به روز رسانی کلیک کنید.
+شما باید تمام مراحل به روز رسانی را پشت سر بگذارید. پروسه به روز رسانی وقتی به پایان می رسد که شما با پیغام 'به روز رسانی پایگاه داده به پایان رسید' روبرو شوید.
+
+<p><b>4.</b> بسیار مهم: از آنجایی که ساختار این نگارش باه قبلی متفاوت است بعضی از قسمت های سایت به درستی کار نخواهد کرد تا زمانی که شما تمام فایل ها را آپلود کنید.
+شما باید همه فایل های موجود در پوشه files رو به سایت خود آپلود کنید.
+
+<p>اگر به هرگونه مشکلی برخوردید به راحتی می توانید از سایت های پشتبانی می پرسش کنید. کاربران توانای زیادی در سایت های پشتیبانی ما وجود دارند که مشکل شما را حل خواهند کرد و یا شما را برای حل مشکل راهنمایی می کنند.</div>
+
+<div class='tbl2'>نکات امنیتی</div>
+
+<div class='tbl1'>در زیر براش ما چند نکته مفید امنیتی را می گوییم:
+<ul style='list-style-type:disc'>
+<li>مطمئن شوید که فایل config.php قابل نوشتن نیست (باید بر روی 644 تنظیم شود).</li>
+<li>به هیچ هنوان فایل setup.php را پس از نصب PHP-Fusion بر روی سرور خود قرار ندهید.</li>
+<li>همشه مطمئن شوید که گذرواژه های FTP و MySQL شما با یکدیگر فرق می کنند.</li>
+<li>به هیچ عنوان اجازه ندهید که در انجمن ها فایل های با پسوند php، html، exe یا هرگونه فایل متنی دیگر پیوست زده شود.</li>
+<li>همیشه به یاد داشته باشید که از سایتهای معتبر برای سیستم خود مد و برنامه های اضافی دریافت کنید.</li>
+</ul></div>
+
+<div class='tbl2'>سایت های پشتیبانی</div>
+
+<div class='tbl1'>اگر سوال پیش آمده و یا مشکل برایتان به وجود آمد به سایت اصلی این برنامه به آدرس
+<a href='http://www.php-fusion-iran.com/'>www.php-fusion-iran.com</a> مراجعه کنید و در قسمت انجمن ها یک پیغام ارسال کنید
+تیم پشتیبانی ما ظرف 38 ساعت مشکل شما را برطرف خواهد کرد.<br><br>
+
+فعلا فقط سایتهای زیر در سراسر جهان به عنوان پشتیبان رسمی فیوژن فعال هستند  ، ما هیچ مسئولیتی در قبال افزونه های دیگر که از طرف سایتهای دیگر یا افراد دیگر منتشر می شود نداریم.
+پیشنهاد ما این است که بنا به مسایل امنیتی فقط افزونه های های خود را از سایتهای رسمی دریافت نمایید </br>
+<a href='http://www.php-fusion-iran.com'>پشتیبان رسمی فیوژن در جمهوری اسلامی ایران</a></br>
+<a href='http://www.php-fusion.at'>پشتیبان رسمی فیوژن در اتریش</a></br> 
+<a href='http://www.phpfusion-ar.com'>پشتیبان رسمی فیوژن درعربستان</a></br>
+<a href='http://www.phpfusion.be'>پشتیبان رسمی فیوژن دربلژیک</a></br> 
+<a href='http://www.phpfusion-br.com'>پشتیبان رسمی فیوژن دربرزیل</a></br> 
+<a href='http://php-fusion.cms-bg.org'>پشتیبان رسمی فیوژن دربلغارستان</a></br> 
+<a href='http://www.php-fusion.dk'>پشتیبان رسمی فیوژن در دانمارک</a></br> 
+<a href='http://www.phpfusion.cz'>پشتیبان رسمی فیوژن درجمهوری چک</a></br>
+<a href='http://www.phpfusion-fr.com'>پشتیبان رسمی فیوژن در فرانسه</a></br> 
+<a href='http://www.phpfusion-de.com'>پشتیبان رسمی فیوژن درآلمان</a></br>
+<a href='http://www.php-fusion.co.hu'>پشتیبان رسمی فیوژن درمجارستان</a></br> 
+<a href='http://www.php-fusion.it'>پشتیبان رسمی فیوژن درایتالیا</a></br>
+<a href='http://www.phpfusion.nl'>پشتیبان رسمی فیوژن درهلند</a></br> 
+<a href='http://www.phpfusion-no.com'>پشتیبان رسمی فیوژن درنروژ</a></br>
+<a href='http://www.php-fusion.pl'>پشتیبان رسمی فیوژن درلهستان</a></br> 
+<a href='http://www.phpfusion.ro'>پشتیبان رسمی فیوژن دررومانی</a></br> 
+<a href='http://netck.ru'>پشتیبان رسمی فیوژن در روسیه</a></br> 
+<a href='http://www.php-fusion.sk'>پشتیبان رسمی فیوژن دراسلواکی</a></br> 
+<a href='http://php-fusion.es'>پشتیبان رسمی فیوژن دراسپانیا</a></br>
+<a href='http://www.php-fusion.se'>پشتیبان رسمی فیوژن درسوئد</a> </br>
+<a href='http://www.phpfusion-tr.com'>پشتیبان رسمی فیوژن درترکیه</a></br>
+<a href='http://www.phpfusion-lt.com'>پشتیبان رسمی فیوژن در لیتوانی</a></br>
+</div>
+
+<div class='tbl2'>با تشکر از</div>
+
+<div class='tbl1'>
+	
+<b>بنیانگذار پروژه و توسعه دهنده اصلی</b><br>
+<font dir="ltr">Nick Jones {Digitanium}زنده یاد نیک جونز</font>
+
+
+<p><span lang="fa"><b>مدیر و توسعه دهنده فیوژن در ایران</b></span><br>
+
+<span lang="fa">سید بهروز آتش پیکر بناب</span><br></font>
+<p><span lang="fa"><b>تیم پارسی کننده</b></span><br>
+نسخه7.02.07  توسط سید بهروز آتش پیکر مدیریت  سایت رسمی سیستم مدیریت فیوژن پارسی <a href='http://www.php-fusion-iran.com'>www.php-fusion-iran.com</a>کاملا فارسی سازی  شده است.<br><br>
+
+
+<div dir="ltr" align="left">
+
+<p><strong>Project Founder</strong><br />
+Nick Jones {Digitanium}</p>
+
+<p><strong>Project Manager</strong><br />
+Philip Daly {Hobbyman}</p>
+
+<p><strong>Management Team</strong><br />
+Arda Kilicdagi {SoulSmasher}<br />
+Emma Wall {samem}<br />
+Happy Svensson {KEFF}<br />
+Jan Mølgaard {janmol}<br />
+Joakim Falk {Domi}<br />
+Max Toball {Matonor}<br />
+Nicolae Crefelean {kneekoo}<br />
+Richard Ainz {Homdax}</p>
+
+<p><strong>Development Manager</strong><br />
+Max Toball {Matonor}</p>
+
+<p><strong>Lead Developer</strong><br />
+Christian Damsgaard Jørgensen {PMM}</p>
+
+<p><strong>Senior Developers</strong><br />
+Bartlomiej Gajda {bartek124}<br />
+Ion Cladico {Falcon}<br />
+Joakim Falk {Domi}<br />
+Karoly Nagy {Korcsii}<br />
+Slawomir Nonas {slawekneo}<br />
+Valerio Vendrame {lelebart}</p>
+
+<p><strong>Junior Developers</strong><br />
+Ankur Thakur {Ankur}<br />
+David Gütl {Discofan}<br />
+Patranescu Florin {keddy}<br />
+Robin Frykholm {DrunkeN}</p>
+
+<p><strong>Additional Contributors</strong><br />
+Andy B {gh0st2k}<br />
+Claus Pedersen {flyingduck}<br />
+Hans Kristian Flaatten {Starefossen}<br />
+James {Daywalker}<br />
+Johan Wilson {Barspin}<br />
+Maarten Kossen {mpkossen/mistermartin75}<br />
+Marcus Gottschalk {MarcusG}<br />
+Patric Forcelini {IceWasp}<br />
+Paul Beuk {muscapaul}<br />
+Robert Gaudyn {Wooya}<br />
+Sveinung Skjaerseth {sveinungs}</p>
+
+<p><strong>3rd Party Components:</strong><br />
+<a href='http://tinymce.moxiecode.com/'>TinyMCE v3.3.8</a> - A HTML WYSIWYG editor by Moxiecode.<br />
+<a href='http://phpmailer.sourceforge.net/'>PHPMailer v5.2.1</a> - Sendmail class with SMTP support by Brent R. Matzelle, Andy Prevost, Marcus Bointon<br />
+<a href='http://www.phpclasses.org/browse/package/2221.html'>HTTPDownload v1.3</a> - A download handler class by Nguyen Quoc Bao.<br />
+<a href='http://jquery.com/'>jQuery v1.7.2</a> - Javascript/Ajax toolkit.<br />
+<a href='http://jqueryui.com/'>jQuery UI v1.8.18</a> - An open source library of interface components based on jQuery.<br />
+<a href='http://colorpowered.com/colorbox/'>ColorBox</a> - A light-weight, customizable lightbox plugin for jQuery.<br />
+<a href='http://icon-king.com'>Nuvola Icons</a> - Images used in bbcodes, news categories and admin icons by David Vignoni.</div>
+
+</div>
+
+</body>
+</html>
